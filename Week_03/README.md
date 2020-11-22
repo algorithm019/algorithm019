@@ -14,7 +14,8 @@
 
 
 ### 回顾到之前的树，用的都是递归的思路：
- ``` def preorder(self, root):
+ ``` 
+ def preorder(self, root):
   if root:
   self.traverse_path.append(root.val)
   self.preorder(root.left)
@@ -32,7 +33,8 @@ def postorder(self, root):
  ``` 
 
 ### Java 代码模版for recursion
- ``` public void recur(int level, int param) {
+ ``` 
+ public void recur(int level, int param) {
 // terminator
 if (level > MAX_LEVEL) {
 // process result
@@ -53,7 +55,8 @@ recur( level: level + 1, newParam);
 原理很简单，但是实操有点难,我还需要多练习去理解一下逻辑
 
 ### 分治代码模板（可以理解为比recursion多了一步）
- ``` def divide_conquer(problem, param1, param2, ...):
+ ``` 
+ def divide_conquer(problem, param1, param2, ...):
     //recursion terminator
     if problem is None:
     print_result
