@@ -1,4 +1,4 @@
-## 学习笔记
+# 学习笔记
 
 看了前几周别人总的总结，发现自己好像写的不是很到位，下周好好改进自己，这周时间来不及了！
 这周内容其实对我而言有点不太理解，练leetcode时候感觉很差，特别是回溯，分支，这些大学里面都没讲过，其实发现自己大三的话，其实基础可能的确就是差一点。
@@ -31,7 +31,7 @@ def postorder(self, root):
   self.traverse_path.append(root.val)
 
 
-## Java 代码模版for recursion
+# Java 代码模版for recursion
 public void recur(int level, int param) {
 // terminator
 if (level > MAX_LEVEL) {
@@ -54,21 +54,21 @@ recur( level: level + 1, newParam);
 
 分治代码模板（可以理解为比recursion多了一步）
 def divide_conquer(problem, param1, param2, ...):
-  # recursion terminator
+  //recursion terminator
   if problem is None:
   print_result
   return
-  # prepare data
+  // prepare data
   data = prepare_data(problem)
   subproblems = split_problem(problem, data)
-  # conquer subproblems
+  //conquer subproblems
   subresult1 = self.divide_conquer(subproblems[0], p1, ...)
   subresult2 = self.divide_conquer(subproblems[1], p1, ...)
   subresult3 = self.divide_conquer(subproblems[2], p1, ...)
   ...
-  # process and generate the final result
+  // process and generate the final result
   result = process_result(subresult1, subresult2, subresult3, …)
-  # revert the current level states
+  // revert the current level states
 
 
 # For 回溯：
