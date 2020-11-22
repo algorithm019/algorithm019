@@ -29,7 +29,7 @@ def postorder(self, root):
   self.postorder(root.left)
   self.postorder(root.right)
   self.traverse_path.append(root.val)
-
+ ``` 
 
 ### Java 代码模版for recursion
  ``` public void recur(int level, int param) {
@@ -44,7 +44,7 @@ process(level, param);
 recur( level: level + 1, newParam);
 // restore current status
 }
-
+ ``` 
 
 ## For 分治:
 本质上就是先divide 变成sub-problem,
@@ -69,7 +69,7 @@ recur( level: level + 1, newParam);
     // process and generate the final result
     result = process_result(subresult1, subresult2, subresult3, …)
     // revert the current level states
-
+ ``` 
 
 ## For 回溯：
 利用试错的思想，分别解决问题
