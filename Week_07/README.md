@@ -143,7 +143,42 @@ def AstarSearch(graph, start, end):
 # 高级树、 AVL AVL AVL AVL 树
 ## AVL tree
 
+1. balance factor: 左子树高度-右子树高度
+balance factor ={-1,0,1}
+2. 通过旋转操作来进行平衡（四种 ）
+### 四种旋转操作
+https://en.wikipedia.org/wiki/Tree_rotation#/media/File:Rebalancing.gif
+#### case 1. 子树 形态：全右子树
+左旋
+#### case 2. 子树 形态：全左子树
+右旋
+#### case 3. 子树 形态：左右子树
+左右旋
+eg: A left is B & B right is C
+#### case 4. 子树 形态：右左子树
+右左旋
+eg: A right is B & B left is C
 
+### drawbacks
+不足：结点需要存储额外信息、且调整次数频繁
+
+## 红黑树 red black tree
+红黑树是一种 近似平衡 的二叉搜索树（ BinaryBinaryBinaryBinaryBinaryBinarySearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch TreeSearch Tree）， 它能够确保任何一 个结点的 左右子树高度差小于两倍 。具体来说，红黑树是满足如下条件的二叉 搜索树 ：
+• 每个结点要么是红色
+，黑• 根结点是黑色
+• 每个叶 结点（ NILNILNIL结点，空 结点）是黑色的 。
+• 不能有相邻接的两个红色 结点
+• 从任一 结点到其每个叶子的所有路径都包含相同数目黑色 结点
+
+### 关键性质
+从根到叶子的最长可能路径不多于短两倍。
+
+### 对比avl and red balck tree
+
+•	AVL trees providefaster lookupsthan Red Black Trees because they are more strictly balanced.
+•	Red Black Trees providefaster insertion and removal operations than AVL trees as fewer rotations are done due to relatively relaxed balancing.
+•	AVL trees store balance factors or heights with each node, thus requires storage for an integer per node whereas Red Black Tree requires only 1 bit of information per node.
+•	Red Black Trees are used in most of the language libraries likemap, multimap, multisetin C++whereas AVL trees are used in databaseswhere faster retrievals are required.
 ### leetcode 547
 
 #### use dfs
